@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Stefamon {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id_stefamon")
     private Long id;
 
     @Column(nullable = false)

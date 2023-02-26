@@ -9,8 +9,8 @@ import java.util.List;
 public class Jogador {
 
     @Id
-    @Column(name = "id_jogador")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_jogador")
     private Long id;
 
     @Column(unique = true)
@@ -24,9 +24,9 @@ public class Jogador {
 
 
     @ManyToMany
-    @JoinTable(name = "Jogador_Stefamon",
-            joinColumns = {@JoinColumn(name = "IdJogador")},
-            inverseJoinColumns = {@JoinColumn(name = "IdStefamon")})
+    @JoinTable(name = "jogador_stefamon",
+            joinColumns = {@JoinColumn(name = "id_jogador")},
+            inverseJoinColumns = {@JoinColumn(name = "id_stefamon")})
     private List<Stefamon> stefamons = new ArrayList<>();
 
     public Jogador() {
